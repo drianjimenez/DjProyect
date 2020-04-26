@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vista_detalle_facturaDataSet" targetNamespace="http://tempuri.org/vista_detalle_facturaDataSet.xsd" xmlns:mstns="http://tempuri.org/vista_detalle_facturaDataSet.xsd" xmlns="http://tempuri.org/vista_detalle_facturaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="supermercadoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="supermercadoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DjProyect.Properties.Settings.GlobalReference.Default.supermercadoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vista_detalle_facturaTableAdapter" GeneratorDataComponentClassName="vista_detalle_facturaTableAdapter" Name="vista_detalle_factura" UserDataComponentName="vista_detalle_facturaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="supermercadoConnectionString (Settings)" DbObjectName="supermercado.dbo.vista_detalle_factura" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT articulo, descripcion, cantidad, importe, factura_numero, coduni FROM dbo.vista_detalle_factura</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="articulo" DataSetColumn="articulo" />
+              <Mapping SourceColumn="descripcion" DataSetColumn="descripcion" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+              <Mapping SourceColumn="importe" DataSetColumn="importe" />
+              <Mapping SourceColumn="factura_numero" DataSetColumn="factura_numero" />
+              <Mapping SourceColumn="coduni" DataSetColumn="coduni" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vista_detalle_facturaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vista_detalle_facturaDataSet" msprop:Generator_UserDSName="vista_detalle_facturaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vista_detalle_factura" msprop:Generator_TableClassName="vista_detalle_facturaDataTable" msprop:Generator_TableVarName="tablevista_detalle_factura" msprop:Generator_TablePropName="vista_detalle_factura" msprop:Generator_RowDeletingName="vista_detalle_facturaRowDeleting" msprop:Generator_RowChangingName="vista_detalle_facturaRowChanging" msprop:Generator_RowEvHandlerName="vista_detalle_facturaRowChangeEventHandler" msprop:Generator_RowDeletedName="vista_detalle_facturaRowDeleted" msprop:Generator_UserTableName="vista_detalle_factura" msprop:Generator_RowChangedName="vista_detalle_facturaRowChanged" msprop:Generator_RowEvArgName="vista_detalle_facturaRowChangeEvent" msprop:Generator_RowClassName="vista_detalle_facturaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="articulo" msprop:Generator_ColumnVarNameInTable="columnarticulo" msprop:Generator_ColumnPropNameInRow="articulo" msprop:Generator_ColumnPropNameInTable="articuloColumn" msprop:Generator_UserColumnName="articulo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="descripcion" msprop:Generator_ColumnVarNameInTable="columndescripcion" msprop:Generator_ColumnPropNameInRow="descripcion" msprop:Generator_ColumnPropNameInTable="descripcionColumn" msprop:Generator_UserColumnName="descripcion">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:double" />
+              <xs:element name="importe" msprop:Generator_ColumnVarNameInTable="columnimporte" msprop:Generator_ColumnPropNameInRow="importe" msprop:Generator_ColumnPropNameInTable="importeColumn" msprop:Generator_UserColumnName="importe" type="xs:double" />
+              <xs:element name="factura_numero" msprop:Generator_ColumnVarNameInTable="columnfactura_numero" msprop:Generator_ColumnPropNameInRow="factura_numero" msprop:Generator_ColumnPropNameInTable="factura_numeroColumn" msprop:Generator_UserColumnName="factura_numero" type="xs:int" />
+              <xs:element name="coduni" msprop:Generator_ColumnVarNameInTable="columncoduni" msprop:Generator_ColumnPropNameInRow="coduni" msprop:Generator_ColumnPropNameInTable="coduniColumn" msprop:Generator_UserColumnName="coduni" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

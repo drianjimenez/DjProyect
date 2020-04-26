@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="cobros_porcobrarDataSet" targetNamespace="http://tempuri.org/cobros_porcobrarDataSet.xsd" xmlns:mstns="http://tempuri.org/cobros_porcobrarDataSet.xsd" xmlns="http://tempuri.org/cobros_porcobrarDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="supermercadoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="supermercadoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DjProyect.Properties.Settings.GlobalReference.Default.supermercadoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vista_cobros_porcobrarTableAdapter" GeneratorDataComponentClassName="vista_cobros_porcobrarTableAdapter" Name="vista_cobros_porcobrar" UserDataComponentName="vista_cobros_porcobrarTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="supermercadoConnectionString (Settings)" DbObjectName="supermercado.dbo.vista_cobros_porcobrar" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo_recibo, nombre, fecha, monto_original, monto_pendiente, empresa, rnc, sucursal, direccion, codigo FROM vista_cobros_porcobrar</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo_recibo" DataSetColumn="codigo_recibo" />
+              <Mapping SourceColumn="nombre" DataSetColumn="nombre" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="monto_original" DataSetColumn="monto_original" />
+              <Mapping SourceColumn="monto_pendiente" DataSetColumn="monto_pendiente" />
+              <Mapping SourceColumn="empresa" DataSetColumn="empresa" />
+              <Mapping SourceColumn="rnc" DataSetColumn="rnc" />
+              <Mapping SourceColumn="sucursal" DataSetColumn="sucursal" />
+              <Mapping SourceColumn="direccion" DataSetColumn="direccion" />
+              <Mapping SourceColumn="codigo" DataSetColumn="codigo" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="cobros_porcobrarDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="cobros_porcobrarDataSet" msprop:Generator_UserDSName="cobros_porcobrarDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vista_cobros_porcobrar" msprop:Generator_TableClassName="vista_cobros_porcobrarDataTable" msprop:Generator_TableVarName="tablevista_cobros_porcobrar" msprop:Generator_RowChangedName="vista_cobros_porcobrarRowChanged" msprop:Generator_TablePropName="vista_cobros_porcobrar" msprop:Generator_RowDeletingName="vista_cobros_porcobrarRowDeleting" msprop:Generator_RowChangingName="vista_cobros_porcobrarRowChanging" msprop:Generator_RowEvHandlerName="vista_cobros_porcobrarRowChangeEventHandler" msprop:Generator_RowDeletedName="vista_cobros_porcobrarRowDeleted" msprop:Generator_RowClassName="vista_cobros_porcobrarRow" msprop:Generator_UserTableName="vista_cobros_porcobrar" msprop:Generator_RowEvArgName="vista_cobros_porcobrarRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo_recibo" msprop:Generator_ColumnVarNameInTable="columncodigo_recibo" msprop:Generator_ColumnPropNameInRow="codigo_recibo" msprop:Generator_ColumnPropNameInTable="codigo_reciboColumn" msprop:Generator_UserColumnName="codigo_recibo" type="xs:int" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="monto_original" msprop:Generator_ColumnVarNameInTable="columnmonto_original" msprop:Generator_ColumnPropNameInRow="monto_original" msprop:Generator_ColumnPropNameInTable="monto_originalColumn" msprop:Generator_UserColumnName="monto_original" type="xs:double" minOccurs="0" />
+              <xs:element name="monto_pendiente" msprop:Generator_ColumnVarNameInTable="columnmonto_pendiente" msprop:Generator_ColumnPropNameInRow="monto_pendiente" msprop:Generator_ColumnPropNameInTable="monto_pendienteColumn" msprop:Generator_UserColumnName="monto_pendiente" type="xs:double" minOccurs="0" />
+              <xs:element name="empresa" msprop:Generator_ColumnVarNameInTable="columnempresa" msprop:Generator_ColumnPropNameInRow="empresa" msprop:Generator_ColumnPropNameInTable="empresaColumn" msprop:Generator_UserColumnName="empresa">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="rnc" msprop:Generator_ColumnVarNameInTable="columnrnc" msprop:Generator_ColumnPropNameInRow="rnc" msprop:Generator_ColumnPropNameInTable="rncColumn" msprop:Generator_UserColumnName="rnc" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sucursal" msprop:Generator_ColumnVarNameInTable="columnsucursal" msprop:Generator_ColumnPropNameInRow="sucursal" msprop:Generator_ColumnPropNameInTable="sucursalColumn" msprop:Generator_UserColumnName="sucursal" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="direccion" msprop:Generator_ColumnVarNameInTable="columndireccion" msprop:Generator_ColumnPropNameInRow="direccion" msprop:Generator_ColumnPropNameInTable="direccionColumn" msprop:Generator_UserColumnName="direccion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="codigo" msprop:Generator_ColumnVarNameInTable="columncodigo" msprop:Generator_ColumnPropNameInRow="codigo" msprop:Generator_ColumnPropNameInTable="codigoColumn" msprop:Generator_UserColumnName="codigo" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vista_cobros_porcobrar" />
+      <xs:field xpath="mstns:codigo_recibo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

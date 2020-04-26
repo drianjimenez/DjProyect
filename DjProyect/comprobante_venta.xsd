@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="comprobante_venta" targetNamespace="http://tempuri.org/comprobante_venta.xsd" xmlns:mstns="http://tempuri.org/comprobante_venta.xsd" xmlns="http://tempuri.org/comprobante_venta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="supermercadoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="supermercadoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DjProyect.Properties.Settings.GlobalReference.Default.supermercadoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="comprobante_ventaTableAdapter" GeneratorDataComponentClassName="comprobante_ventaTableAdapter" Name="comprobante_venta" UserDataComponentName="comprobante_ventaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="supermercadoConnectionString (Settings)" DbObjectName="supermercado.dbo.comprobante_venta" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT cod_tipo, tipo FROM dbo.comprobante_venta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="cod_tipo" DataSetColumn="cod_tipo" />
+              <Mapping SourceColumn="tipo" DataSetColumn="tipo" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="supermercadoConnectionString (Settings)" DbObjectName="supermercado.dbo.comprobante_venta" DbObjectType="View" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT cod_tipo, tipo FROM dbo.comprobante_venta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="comprobante_venta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="comprobante_venta" msprop:Generator_UserDSName="comprobante_venta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="comprobante_venta" msprop:Generator_TableClassName="comprobante_ventaDataTable" msprop:Generator_TableVarName="tablecomprobante_venta" msprop:Generator_RowChangedName="comprobante_ventaRowChanged" msprop:Generator_TablePropName="_comprobante_venta" msprop:Generator_RowDeletingName="comprobante_ventaRowDeleting" msprop:Generator_RowChangingName="comprobante_ventaRowChanging" msprop:Generator_RowEvHandlerName="comprobante_ventaRowChangeEventHandler" msprop:Generator_RowDeletedName="comprobante_ventaRowDeleted" msprop:Generator_RowClassName="comprobante_ventaRow" msprop:Generator_UserTableName="comprobante_venta" msprop:Generator_RowEvArgName="comprobante_ventaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cod_tipo" msprop:Generator_ColumnVarNameInTable="columncod_tipo" msprop:Generator_ColumnPropNameInRow="cod_tipo" msprop:Generator_ColumnPropNameInTable="cod_tipoColumn" msprop:Generator_UserColumnName="cod_tipo" type="xs:int" />
+              <xs:element name="tipo" msprop:Generator_ColumnVarNameInTable="columntipo" msprop:Generator_ColumnPropNameInRow="tipo" msprop:Generator_ColumnPropNameInTable="tipoColumn" msprop:Generator_UserColumnName="tipo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:comprobante_venta" />
+      <xs:field xpath="mstns:cod_tipo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

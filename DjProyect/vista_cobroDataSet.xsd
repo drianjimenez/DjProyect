@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="vista_cobroDataSet" targetNamespace="http://tempuri.org/vista_cobroDataSet.xsd" xmlns:mstns="http://tempuri.org/vista_cobroDataSet.xsd" xmlns="http://tempuri.org/vista_cobroDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="supermercadoConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="supermercadoConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DjProyect.Properties.Settings.GlobalReference.Default.supermercadoConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vista_cobroTableAdapter" GeneratorDataComponentClassName="vista_cobroTableAdapter" Name="vista_cobro" UserDataComponentName="vista_cobroTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="supermercadoConnectionString (Settings)" DbObjectName="supermercado.dbo.vista_cobro" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT codigo_recibo, fecha, monto_original, monto_pendiente, descuento, concepto, cliente FROM vista_cobro</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="codigo_recibo" DataSetColumn="codigo_recibo" />
+              <Mapping SourceColumn="fecha" DataSetColumn="fecha" />
+              <Mapping SourceColumn="monto_original" DataSetColumn="monto_original" />
+              <Mapping SourceColumn="monto_pendiente" DataSetColumn="monto_pendiente" />
+              <Mapping SourceColumn="descuento" DataSetColumn="descuento" />
+              <Mapping SourceColumn="concepto" DataSetColumn="concepto" />
+              <Mapping SourceColumn="cliente" DataSetColumn="cliente" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="vista_cobroDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="vista_cobroDataSet" msprop:Generator_UserDSName="vista_cobroDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="vista_cobro" msprop:Generator_TableClassName="vista_cobroDataTable" msprop:Generator_TableVarName="tablevista_cobro" msprop:Generator_RowChangedName="vista_cobroRowChanged" msprop:Generator_TablePropName="vista_cobro" msprop:Generator_RowDeletingName="vista_cobroRowDeleting" msprop:Generator_RowChangingName="vista_cobroRowChanging" msprop:Generator_RowEvHandlerName="vista_cobroRowChangeEventHandler" msprop:Generator_RowDeletedName="vista_cobroRowDeleted" msprop:Generator_RowClassName="vista_cobroRow" msprop:Generator_UserTableName="vista_cobro" msprop:Generator_RowEvArgName="vista_cobroRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codigo_recibo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncodigo_recibo" msprop:Generator_ColumnPropNameInRow="codigo_recibo" msprop:Generator_ColumnPropNameInTable="codigo_reciboColumn" msprop:Generator_UserColumnName="codigo_recibo" type="xs:int" />
+              <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="monto_original" msprop:Generator_ColumnVarNameInTable="columnmonto_original" msprop:Generator_ColumnPropNameInRow="monto_original" msprop:Generator_ColumnPropNameInTable="monto_originalColumn" msprop:Generator_UserColumnName="monto_original" type="xs:double" minOccurs="0" />
+              <xs:element name="monto_pendiente" msprop:Generator_ColumnVarNameInTable="columnmonto_pendiente" msprop:Generator_ColumnPropNameInRow="monto_pendiente" msprop:Generator_ColumnPropNameInTable="monto_pendienteColumn" msprop:Generator_UserColumnName="monto_pendiente" type="xs:double" minOccurs="0" />
+              <xs:element name="descuento" msprop:Generator_ColumnVarNameInTable="columndescuento" msprop:Generator_ColumnPropNameInRow="descuento" msprop:Generator_ColumnPropNameInTable="descuentoColumn" msprop:Generator_UserColumnName="descuento" type="xs:double" minOccurs="0" />
+              <xs:element name="concepto" msprop:Generator_ColumnVarNameInTable="columnconcepto" msprop:Generator_ColumnPropNameInRow="concepto" msprop:Generator_ColumnPropNameInTable="conceptoColumn" msprop:Generator_UserColumnName="concepto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cliente" msprop:Generator_ColumnVarNameInTable="columncliente" msprop:Generator_ColumnPropNameInRow="cliente" msprop:Generator_ColumnPropNameInTable="clienteColumn" msprop:Generator_UserColumnName="cliente" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:vista_cobro" />
+      <xs:field xpath="mstns:codigo_recibo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
